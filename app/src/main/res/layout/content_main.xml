@@ -36,6 +36,14 @@
         android:background="?android:attr/listDivider"
         android:visibility="invisible" />
 
+    <View
+        android:id="@+id/divider10"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="0"
+        android:background="?android:attr/listDivider"
+        android:visibility="visible" />
+
     <TextView
         android:id="@+id/txtQuarto"
         android:layout_width="match_parent"
@@ -66,17 +74,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@android:color/holo_orange_light"
-            android:text="@string/str_btn_ligar" />
+            android:text="@string/str_btn_ligar"
+            android:textColor="@color/colorAccent" />
 
         <Button
             android:id="@+id/btnDesligarQuarto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@android:color/holo_red_light"
             android:text="@string/str_btn_desligar"
-            android:typeface="sans" />
+            android:textColor="@android:color/holo_red_dark" />
 
     </LinearLayout>
 
@@ -95,6 +102,14 @@
         android:background="?android:attr/listDivider"
         android:visibility="invisible" />
 
+    <View
+        android:id="@+id/divider9"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="0"
+        android:background="?android:attr/listDivider"
+        android:visibility="visible" />
+
     <TextView
         android:id="@+id/txtSala"
         android:layout_width="match_parent"
@@ -104,6 +119,14 @@
         android:text="@string/string_sala"
         android:textSize="20sp"
         app:fontFamily="casual" />
+
+    <View
+        android:id="@+id/divider7"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_weight="0"
+        android:background="?android:attr/listDivider"
+        android:visibility="invisible" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -116,16 +139,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@android:color/holo_orange_light"
-            android:text="@string/str_btn_ligar" />
+            android:text="@string/str_btn_ligar"
+            android:textColor="@color/colorAccent" />
 
         <Button
             android:id="@+id/btnDesligarSala"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@android:color/holo_red_light"
-            android:text="@string/str_btn_desligar" />
+            android:text="@string/str_btn_desligar"
+            android:textColor="@android:color/holo_red_dark" />
 
     </LinearLayout>
 
@@ -135,6 +158,24 @@
         android:layout_height="wrap_content"
         android:layout_weight="0"
         android:text="@string/str_btn_desconectar" />
+
+    <View
+        android:id="@+id/divider12"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="0"
+        android:background="?android:attr/listDivider"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/divider11"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="0"
+        android:background="?android:attr/listDivider"
+        android:visibility="visible" /><![CDATA[
+
     android:text="TextView" />
 
+]]>
 </LinearLayout>
