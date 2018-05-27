@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Controluz v1</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">M.L.H.V Productions</string>
+    <string name="nav_header_subtitle">mlhvprod@hotmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="string_quarto">Quarto</string>
+    <string name="string_sala">Sala</string>
+    <string name="str_btn_ligar">ON</string>
+    <string name="str_btn_desligar">OFF</string>
+    <string name="str_btn_desconectar">Desconectar</string>
+    <string name="controle">controle das luzes do imóvel</string>
+    <string name="str_sobre">Sobre</string>
+    <string name="str_ferramentas">Ferramentas</string>
+    <string name="str_outros">Outros</string>
+</resources>
