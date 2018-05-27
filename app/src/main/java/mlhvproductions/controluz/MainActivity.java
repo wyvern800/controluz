@@ -61,12 +61,16 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_github) {
             // Handle the github link
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/wyvern800/controluz")));
-            Toast.makeText(this,getApplicationContext().getString(R.string.op1), Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getApplicationContext().getString(R.string.op1), Toast.LENGTH_LONG).show();
             Log.e(TAG, "onNavigationItemSelected #1");
-        } else if (id == R.id.nav_sobre) {
-            startActivity(new Intent(this, AboutActivity.class));
+        } else if (id == R.id.nav_historico) {
+            startActivity(new Intent(this, HistoryActivity.class));
             Toast.makeText(this,getApplicationContext().getString(R.string.op2), Toast.LENGTH_LONG).show();
             Log.e(TAG, "onNavigationItemSelected #2");
+        } else if (id == R.id.nav_sobre) {
+            startActivity(new Intent(this, AboutActivity.class));
+            Toast.makeText(this,getApplicationContext().getString(R.string.op3), Toast.LENGTH_LONG).show();
+            Log.e(TAG, "onNavigationItemSelected #3");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

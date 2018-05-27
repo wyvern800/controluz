@@ -10,6 +10,10 @@
                 android:icon="@drawable/ic_menu_share"
                 android:title="@string/nav_github" />
             <item
+                android:id="@+id/nav_historico"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="@string/str_historico" />
+            <item
                 android:id="@+id/nav_sobre"
                 android:icon="@drawable/ic_menu_send"
                 android:title="@string/str_sobre" />

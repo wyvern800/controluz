@@ -24,5 +24,11 @@
     <string name="txtNome4">00178113 - Hugo Ferreira de Sá</string>
     <string name="op1">Opção 1</string>
     <string name="op2">Opção 2</string>
+    <string name="op3">Opção 3</string>
     <string name="default_notification_channel_id">Notificação</string>
+    <string name="element_text">Element</string>
+    <string name="grid_layout_manager">Grid Layout Manager</string>
+    <string name="linear_layout_manager">Linear Layout Manager</string>
+    <string name="intro_message">teste</string>
+    <string name="str_historico">Histórico</string>
 </resources>
