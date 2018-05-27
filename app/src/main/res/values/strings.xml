@@ -24,4 +24,5 @@
     <string name="txtNome4">00170596 - Hugo Ferreira de Sá</string>
     <string name="op1">Opção 1</string>
     <string name="op2">Opção 2</string>
+    <string name="default_notification_channel_id">Notificação</string>
 </resources>
