@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity
             Log.e(TAG, "onNavigationItemSelected #1");
         } else if (id == R.id.nav_sobre) {
             startActivity(new Intent(this, AboutActivity.class));
+            Toast.makeText(this,getApplicationContext().getString(R.string.op2), Toast.LENGTH_LONG).show();
             Log.e(TAG, "onNavigationItemSelected #2");
         }
 
