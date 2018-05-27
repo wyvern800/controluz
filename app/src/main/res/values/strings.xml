@@ -4,6 +4,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">M.L.H.V Productions</string>
     <string name="nav_header_subtitle">mlhvprod@hotmail.com</string>
+    <string name="nav_github">Github</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="string_quarto">Quarto</string>
@@ -15,4 +16,12 @@
     <string name="str_sobre">Sobre</string>
     <string name="str_ferramentas">Ferramentas</string>
     <string name="str_outros">Outros</string>
+    <string name="txtSobre">Sobre</string>
+    <string name="txtEquipe">Equipe</string>
+    <string name="txtNome1">00181627 - Matheus Guilherme Ferreira</string>
+    <string name="txtNome2">00179482 - Leonardo Souza da Costa</string>
+    <string name="txtNome3">00170596 - Vinicius Modesto da Cruz</string>
+    <string name="txtNome4">00170596 - Hugo Ferreira de Sá</string>
+    <string name="op1">Opção 1</string>
+    <string name="op2">Opção 2</string>
 </resources>
