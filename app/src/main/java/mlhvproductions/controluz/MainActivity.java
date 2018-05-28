@@ -3,6 +3,7 @@ package mlhvproductions.controluz;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.util.Log;
@@ -16,10 +17,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
 
     private String TAG = "MainActivity";
 
@@ -57,6 +59,23 @@ public class MainActivity extends AppCompatActivity
         Button btnOffQuarto= (Button)findViewById(R.id.btnDesligarQuarto);
         Button btnDQuarto= (Button)findViewById(R.id.btnDesconectarQuarto);
 
+        /*TODO Sugiro usar ToggleButton que é mais fácil.
+         *  Deixei ele por cima dos outros no layout, depois você arruma
+         */
+        ToggleButton btnLigaDesliga = findViewById(R.id.btnLigaDesliga);
+//        https://developer.android.com/guide/topics/ui/controls/togglebutton
+        btnLigaDesliga.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if (isChecked) {
+                    //TODO Fazer as inclusões no Banco de dados
+                    Toast.makeText(getApplicationContext(),"Luzes Ligadas", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(),"Luzes Desligadas", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
         //Adicionar ação nos botões
         addAcaoNoBotao(btnOnSala, R.string.strOnline);
         addAcaoNoBotao(btnOffSala, R.string.strOffline);
@@ -89,32 +108,6 @@ public class MainActivity extends AppCompatActivity
             super.onBackPressed();
             Log.e(TAG, "onBackPressed");
         }
-    }
-
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        if (id == R.id.nav_github) {
-            // Handle the github link
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/wyvern800/controluz")));
-            Toast.makeText(this, getApplicationContext().getString(R.string.op1), Toast.LENGTH_LONG).show();
-            Log.e(TAG, "onNavigationItemSelected #1");
-        } else if (id == R.id.nav_historico) {
-            startActivity(new Intent(this, HistoryActivity.class));
-            Toast.makeText(this,getApplicationContext().getString(R.string.op2), Toast.LENGTH_LONG).show();
-            Log.e(TAG, "onNavigationItemSelected #2");
-        } else if (id == R.id.nav_sobre) {
-            startActivity(new Intent(this, AboutActivity.class));
-            Toast.makeText(this,getApplicationContext().getString(R.string.op3), Toast.LENGTH_LONG).show();
-            Log.e(TAG, "onNavigationItemSelected #3");
-        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
     }
 
     @Override
@@ -152,4 +145,28 @@ public class MainActivity extends AppCompatActivity
         super.onDestroy();
         Log.d(TAG, "onDestroy");
     }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.nav_github) {
+            // Handle the github link
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/wyvern800/controluz")));
+            Log.e(TAG, "onNavigationItemSelected #1");
+        } else if (id == R.id.nav_historico) {
+            startActivity(new Intent(getApplicationContext(), HistoryActivity2.class));
+            Log.e(TAG, "onNavigationItemSelected #2");
+        } else if (id == R.id.nav_sobre) {
+            startActivity(new Intent(getApplicationContext(), AboutActivity.class));
+            Log.e(TAG, "onNavigationItemSelected #3");
+        }
+
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
 }

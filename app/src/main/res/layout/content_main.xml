@@ -85,6 +85,13 @@
             android:text="@string/str_btn_desligar"
             android:textColor="@android:color/holo_red_dark" />
 
+        <ToggleButton
+            android:id="@+id/btnLigaDesliga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textOn="Desligar"
+            android:textOff="Ligar"/>
+
     </LinearLayout>
 
     <Button

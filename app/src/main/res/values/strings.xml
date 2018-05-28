@@ -34,4 +34,5 @@
     <string name="strOnline">Luzes ligadas</string>
     <string name="strOffline">Luzes desligadas</string>
     <string name="strDesconectar">Desconectado do Bluetooth</string>
+    <string name="title_activity_history2">HistoryActivity2</string>
 </resources>
