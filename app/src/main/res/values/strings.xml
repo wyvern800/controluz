@@ -31,4 +31,7 @@
     <string name="linear_layout_manager">Linear Layout Manager</string>
     <string name="intro_message">teste</string>
     <string name="str_historico">Histórico</string>
+    <string name="strOnline">Luzes ligadas</string>
+    <string name="strOffline">Luzes desligadas</string>
+    <string name="strDesconectar">Desconectado do Bluetooth</string>
 </resources>
