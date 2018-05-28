@@ -15,12 +15,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private String TAG = "MainActivity";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +40,44 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //Botão ON Sala
+        /**btnOnSala.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(), getApplicationContext().getString(R.string.txtOnline), Toast.LENGTH_LONG).show();
+                Log.e(TAG, "onClick #1");
+            }*
+        });*/
+
+        Button btnOnSala= (Button)findViewById(R.id.btnLigarSala);
+        Button btnOffSala= (Button)findViewById(R.id.btnDesligarSala);
+        Button btnDSala= (Button)findViewById(R.id.btnDesconectarSala);
+        Button btnOnQuarto= (Button)findViewById(R.id.btnLigarQuarto);
+        Button btnOffQuarto= (Button)findViewById(R.id.btnDesligarQuarto);
+        Button btnDQuarto= (Button)findViewById(R.id.btnDesconectarQuarto);
+
+        //Adicionar ação nos botões
+        addAcaoNoBotao(btnOnSala, R.string.strOnline);
+        addAcaoNoBotao(btnOffSala, R.string.strOffline);
+        addAcaoNoBotao(btnDSala, R.string.strDesconectar);
+        addAcaoNoBotao(btnOnQuarto, R.string.strOnline);
+        addAcaoNoBotao(btnOffQuarto, R.string.strOffline);
+        addAcaoNoBotao(btnDQuarto, R.string.strDesconectar);
+
     }
+
+    public void addAcaoNoBotao(Button btn, final int a) {
+        btn.setOnClickListener(new View.OnClickListener(){
+        @Override
+        public void onClick(View view) {
+        Toast.makeText(view.getContext(), getApplicationContext().getString(a), Toast.LENGTH_LONG).show();
+        Log.e(TAG, "onClick button");
+        }
+        });
+    }
+
+
 
     @Override
     public void onBackPressed() {
