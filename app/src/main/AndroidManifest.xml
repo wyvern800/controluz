@@ -24,12 +24,17 @@
         </activity>
         <activity
             android:name=".AboutActivity"
+            android:label="@string/title_activity_about"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!--<activity android:name=".HistoryActivity"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
-        </activity>
+        </activity>-->
 
         <!-- Notificações em Java -->
         <!-- [START firebase_service] -->
@@ -52,9 +57,9 @@
 
         <!-- Notificações em Kotlin - comente se quiser usar no modo java -->
         <service android:name=".MyFirebaseMessagingService">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
+        <intent-filter>
+             <action android:name="com.google.firebase.MESSAGING_EVENT" />
+        </intent-filter>
         </service>
         <service android:name=".FirebaseIDService">
             <intent-filter>
@@ -62,9 +67,8 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".HistoryActivity" />
         <activity
-            android:name=".HistoryActivity2"
+            android:name=".HistoryActivity"
             android:label="@string/title_activity_history2"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>

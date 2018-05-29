@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -14,7 +12,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -43,45 +40,42 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        //Botão ON Sala
-        /**btnOnSala.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(view.getContext(), getApplicationContext().getString(R.string.txtOnline), Toast.LENGTH_LONG).show();
-                Log.e(TAG, "onClick #1");
-            }*
-        });*/
-
-        Button btnOnSala= (Button)findViewById(R.id.btnLigarSala);
-        Button btnOffSala= (Button)findViewById(R.id.btnDesligarSala);
         Button btnDSala= (Button)findViewById(R.id.btnDesconectarSala);
-        Button btnOnQuarto= (Button)findViewById(R.id.btnLigarQuarto);
-        Button btnOffQuarto= (Button)findViewById(R.id.btnDesligarQuarto);
         Button btnDQuarto= (Button)findViewById(R.id.btnDesconectarQuarto);
 
-        /*TODO Sugiro usar ToggleButton que é mais fácil.
+        /*TODO Sugiro usar ToggleButton que é mais fácil - Obrigado pela ideia, pra mim era desconhecido
          *  Deixei ele por cima dos outros no layout, depois você arruma
          */
-        ToggleButton btnLigaDesliga = findViewById(R.id.btnLigaDesliga);
-//        https://developer.android.com/guide/topics/ui/controls/togglebutton
-        btnLigaDesliga.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        //Quarto
+        ToggleButton btnLigaDesligaQuarto = findViewById(R.id.btnLigaDesligaQuarto);
+        btnLigaDesligaQuarto.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                 if (isChecked) {
                     //TODO Fazer as inclusões no Banco de dados
-                    Toast.makeText(getApplicationContext(),"Luzes Ligadas", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Luzes do quarto ligadas", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(getApplicationContext(),"Luzes Desligadas", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Luzes do quarto desligadas", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    //Sala
+        ToggleButton btnLigaDesligaSala = findViewById(R.id.btnLigaDesligaSala);
+//        https://developer.android.com/guide/topics/ui/controls/togglebutton
+        btnLigaDesligaSala.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if (isChecked) {
+                    //TODO Fazer as inclusões no Banco de dados
+                    Toast.makeText(getApplicationContext(),"Luzes da sala ligadas", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(),"Luzes da sala desligadas", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
         //Adicionar ação nos botões
-        addAcaoNoBotao(btnOnSala, R.string.strOnline);
-        addAcaoNoBotao(btnOffSala, R.string.strOffline);
         addAcaoNoBotao(btnDSala, R.string.strDesconectar);
-        addAcaoNoBotao(btnOnQuarto, R.string.strOnline);
-        addAcaoNoBotao(btnOffQuarto, R.string.strOffline);
         addAcaoNoBotao(btnDQuarto, R.string.strDesconectar);
 
     }
@@ -156,7 +150,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/wyvern800/controluz")));
             Log.e(TAG, "onNavigationItemSelected #1");
         } else if (id == R.id.nav_historico) {
-            startActivity(new Intent(getApplicationContext(), HistoryActivity2.class));
+            startActivity(new Intent(getApplicationContext(), HistoryActivity.class));
             Log.e(TAG, "onNavigationItemSelected #2");
         } else if (id == R.id.nav_sobre) {
             startActivity(new Intent(getApplicationContext(), AboutActivity.class));

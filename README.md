@@ -3,6 +3,8 @@ Projeto voltado para o aplicativo android da matéria de **tópicos** do curso *
   
 ## Objetivo
 Simulação de ~~acendimento de luzes em residência~~ acendimento de leds.  
+
+
 Em nosso projeto iremos fazer uma simulação de automação residencial, simulando o
 acendimento e o desligamento de uma residência para dois cômodos, sala e quarto usando
 o celular para ligar e desligar as luzes. Usaremos os seguintes materiais para a confecção

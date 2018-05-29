@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Controluz v1</string>
+    <string name="app_name">Controluz - Aplicativo</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">M.L.H.V Productions</string>
@@ -34,5 +34,7 @@
     <string name="strOnline">Luzes ligadas</string>
     <string name="strOffline">Luzes desligadas</string>
     <string name="strDesconectar">Desconectado do Bluetooth</string>
-    <string name="title_activity_history2">HistoryActivity2</string>
+    <string name="title_activity_history2">Controluz - Histórico</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="str_app">Aplicativo</string>
 </resources>

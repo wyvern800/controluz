@@ -69,28 +69,12 @@
         android:gravity="start"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btnLigarQuarto"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/str_btn_ligar"
-            android:textColor="@color/colorAccent" />
-
-        <Button
-            android:id="@+id/btnDesligarQuarto"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/str_btn_desligar"
-            android:textColor="@android:color/holo_red_dark" />
-
         <ToggleButton
-            android:id="@+id/btnLigaDesliga"
+            android:id="@+id/btnLigaDesligaQuarto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textOn="Desligar"
-            android:textOff="Ligar"/>
+            android:textOff="Ligar"
+            android:textOn="Desligar" />
 
     </LinearLayout>
 
@@ -141,21 +125,13 @@
         android:layout_weight="0"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btnLigarSala"
-            android:layout_width="wrap_content"
+        <ToggleButton
+            android:id="@+id/btnLigaDesligaSala"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/str_btn_ligar"
-            android:textColor="@color/colorAccent" />
-
-        <Button
-            android:id="@+id/btnDesligarSala"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/str_btn_desligar"
-            android:textColor="@android:color/holo_red_dark" />
+            android:textOff="Ligar"
+            android:textOn="Desligar" />
 
     </LinearLayout>
 
