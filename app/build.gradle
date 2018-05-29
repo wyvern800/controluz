@@ -35,6 +35,7 @@ dependencies {
     implementation 'com.firebase:firebase-jobdispatcher:0.5.2'
     implementation 'com.google.firebase:firebase-core:11.8.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
 
 }
 
