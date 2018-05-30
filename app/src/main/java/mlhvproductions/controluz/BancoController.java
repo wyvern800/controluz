@@ -29,9 +29,9 @@ public class BancoController {
 
 
         if (resultado ==-1)
-            return "Erro ao inserir registro";
+            return "erro"; //erro
         else
-            return "Registro Inserido com sucesso";
+            return "okay"; //success
 
     }
 
