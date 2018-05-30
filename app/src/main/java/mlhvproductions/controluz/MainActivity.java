@@ -15,8 +15,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.DatePicker;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+
+import java.text.DateFormat;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
 
@@ -66,9 +70,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                 if (isChecked) {
+
+                    BancoController crud = new BancoController(getBaseContext());
+                    String  data = DateFormat.getDateTimeInstance().format(new Date());
+                    String status;
+                    status = crud.insereDado("Luzes da sala ligadas", data);
+
                     //TODO Fazer as inclusões no Banco de dados
                     Toast.makeText(getApplicationContext(),"Luzes da sala ligadas", Toast.LENGTH_SHORT).show();
                 } else {
+
+                    BancoController crud = new BancoController(getBaseContext());
+                    String  data = DateFormat.getDateTimeInstance().format(new Date());
+                    String status2;
+                    status2 = crud.insereDado("Luzes da sala ligadas", data);
+
                     Toast.makeText(getApplicationContext(),"Luzes da sala desligadas", Toast.LENGTH_SHORT).show();
                 }
             }
